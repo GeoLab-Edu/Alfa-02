@@ -1,0 +1,24 @@
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.img-size {
+    width: 345px;
+    height: 276px;
+}
+.individual-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.img-container {
+    margin-right: 50px;
+}
+.decoration {
+    text-decoration: none;
+    color: black;
+}
