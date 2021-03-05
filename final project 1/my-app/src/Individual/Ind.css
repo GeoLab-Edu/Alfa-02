@@ -1,0 +1,74 @@
+.box {
+    display: flex;
+    width: 90%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 5%;
+    background-color: white;
+    padding-bottom: 2%;
+    margin-bottom: 2%;
+    flex-direction: column;
+}
+.text-right {  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+}
+.font-design {
+    font-size: 20px;
+    color: #E84F5B;
+    margin: 0;
+    font-family: "Montserrat";
+}
+.font-display {
+    width: 100%;
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.btn-position {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-style {
+    background-color: #E84F5B;
+    width: 290px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-color: #E84F5B;
+    border-radius: 40px;
+    font-size: 32px;
+    font-family: "montserrat";
+}
+.drive-container {
+    height: 300px;
+    width: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    z-index: 2;
+}
+.margin {
+    opacity: 0.6;
+    margin-left: 20%; 
+    background-color: #5C656B;
+    z-index: 11;
+}
+.self-div {
+    margin-bottom: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+    color: white;
+}
