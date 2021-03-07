@@ -1,0 +1,68 @@
+.repeat {
+    background-repeat: no-repeat;
+    margin-top: 1%;
+    width: 90%;
+    margin-left: 10%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.contacts-wrap {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+.contacts-div {
+    width: 365px;
+    height: 85px;
+    border-radius: 10px;
+    border: 5px solid #E84F5B;
+    background-color: #E84F5B;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: white;
+    font-family: "FiraGO";
+}
+.div-cont {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+.body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.icon-container {
+    margin-right: 2%;
+    margin-left: 2%;
+    width: 60px
+}
+.margin-left {
+    margin-left: 2%;
+}
+.year {
+    width: 100px;
+    height: 85px;
+    background-color: #E84F5B;
+    color: white;
+    border: 1px solid #E84F5B;
+    border-radius: 10px;
+}
+.year-div {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 18%;
+    align-items: center;
+}
+.p-year {
+    font-size: 28px;
+    font-family: "ForaGO";
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
