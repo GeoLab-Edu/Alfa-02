@@ -37,15 +37,23 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
-    margin-bottom: 100px;
+    margin-bottom: 5%;
     color: white;
   }
   .h1 {
     background-color: rgba(17,15,15, .34);
-    width: 700px;
+    width: 50%;
     height: 200px;
-    padding-left: 200px;
-    padding-right: 150px;
+    padding-left: 12%;
+    padding-right: 3%;
+    text-align: left;
+  }
+  .h1-footer {
+    background-color: rgba(17,15,15, .34);
+    width: 50%;
+    height: 200px;
+    padding-left: 12%;
+    padding-right: 3%;
     text-align: left;
   }
   .hr {
@@ -55,4 +63,55 @@
   }
   .icon {
     margin: 15px;
+  }
+
+
+  @media (max-width: 1150px) {
+    #prop-h1 {font-size: 20px}
+    .place {
+      height: 350px
+    }
+    .img {
+      height: 380px
+    }
+    #p-size{
+      font-size: 12px;
+    }
+    .h1 {
+      height: 100px;
+      width: 65%;
+      padding-bottom: 2%;
+    }
+  }
+
+  @media (max-width: 750px) {
+    #prop-h1 {font-size: 16px}
+    #p-size{
+      font-size: 10px;
+    }
+    .img {
+      height: 300px
+    }
+    .h1 {
+      height: 80px;
+      width: 65%;
+      padding-bottom: 2%;
+      margin-bottom: 15%;
+    }
+  }
+
+  @media (max-width: 650px) {
+
+    .h1 {
+      margin-bottom: 15%;
+    }
+  }
+
+  @media (max-width: 590px) {
+
+    .h1 {
+      height: 90px;
+      width: 75%;
+      margin-bottom: 20%;
+    }
   }

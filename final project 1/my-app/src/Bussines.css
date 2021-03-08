@@ -22,3 +22,41 @@
     width: 496px;
     height: 396.8px;
 }
+.bussines-icon {
+    width: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    padding: 15px;
+}
+.b-margin {
+    margin-bottom: 30px;
+}
+
+@media (max-width: 1150px) {
+    #b-first {
+        display: none;
+    }
+    .b-img-size {
+        width: 248px;
+        height: 199px;
+    }
+    #b-b-text {
+        display: none;
+    }
+    #b-text {
+        font-size: 22px;
+        margin: 0;
+        margin-top: 3%;
+    }
+    .bussines-container {
+        padding-top: 0;
+    }
+}
+
+@media (min-width: 1300px) {
+    #b-second {
+        display: none;
+    }
+}

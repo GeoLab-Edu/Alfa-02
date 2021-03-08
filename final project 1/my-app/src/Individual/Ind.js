@@ -1,4 +1,3 @@
-import car from "../photos/icon-photo/pexels-photo-1571783.png"
 import Liability from "../photos/icon-photo/pexels-photo-532001@2x.png"
 import Passenger from "../photos/icon-photo/pexels-photo-1117647@2x.png"
 import Automobile from "../photos/icon-photo/pexels-photo-1719648@2x.png"
@@ -9,22 +8,15 @@ import agreements from "../photos/icon-photo/Group-339.svg"
 import tarrif from "../photos/icon-photo/Group-337.svg"
 import YouNeed from "./YouNeed"
 import Footer from "../Footer"
+import IndividualHead from "./IndividulHead"
 
 
 export default function Ind() {
     return (
         <div style={{ backgroundColor: "#F6F6F6" }}>
-            <div style={{ backgroundImage: `url(${car})`, marginTop: 0 }} className="img div-place">
-                <div className="div-flex" style={{ justifyContent: "flex-start" }}>
-                    {/* <div><p>Home> Individual> Auto</p></div> */}
-                    <div className="h1" style={{ marginTop: "20%" }}>
-                        <p style={{ fontFamily: 'Montserrat', fontSize: "32px" }}>
-                            AUTO INSURANCE</p>
-                        <hr className="hr" />
-                        <p style={{ fontFamily: 'FiraGO', fontSize: "18px" }}>While driving the road is full of surprises. You can protect your finances.</p>
-                    </div>
-                </div>
-            </div>
+
+            <IndividualHead />
+
             <div className="individual-container" style={{ marginTop: "2%" }}>
                 <a href="" className="decoration">
                     <div className="img-container">
@@ -51,6 +43,8 @@ export default function Ind() {
                     </div>
                 </a>
             </div>
+
+
             <div className="box">
                 <p style={{ fontSize: 16, fontFamily: "Montserrat" }}>While driving the road is full of surprises. You can protect your finances and use 24 hours auto assistant by insuring your car. In case of a car accident, car insurance will help you to repair or change damaged parts of the car and give you the opportunity to return to your normal life in the shortest time.</p>
                 <div className="text-right">
@@ -83,7 +77,11 @@ export default function Ind() {
             <div className="btn-position">
                 <button className="btn-style" >Buy</button>
             </div>
+
+
             <YouNeed />
+
+
             <Footer />
         </div >
     )

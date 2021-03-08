@@ -21,14 +21,17 @@ export default function Personal() {
             <div style={{ height: "620px" }}>
                 <div style={{ backgroundImage: `url(${advert})`, height: 500, marginTop: 0 }} className="img div-place">
                     <div className="div-flex" style={{ justifyContent: "flex-start", alignItems: "flex-end" }}>
-                        <img src={myPhoto} className="circle placeholder" ></img>
-                        <div className="name-container">
-                            <p style={{ color: "#110F0F", fontFamily: "Montserrat", fontSize: 25, margin: 0 }}>beso dvalishvili</p>
-                            <Link to="/" style={{ color: "#110F0F", fontFamily: "Montserrat", fontSize: 18, margin: 0 }}>Edit</Link>
-                        </div>
-                        <div className="logout">
-                            <Link to="/" style={{ color: "#110F0F", fontFamily: "Montserrat", fontSize: 18, margin: 0 }}>logout</Link>
-                            <Link to="/" style={{ color: "#110F0F", fontFamily: "Montserrat", fontSize: 18, margin: 0 }}>Add Business Account +</Link>
+                        <div className="place-name">
+                            <img src={myPhoto} className="circle placeholder" ></img>
+                            <div className="name-container">
+                                <p style={{ color: "#110F0F", fontFamily: "Montserrat", fontSize: 25, margin: 0 }}>beso dvalishvili</p>
+                                <Link to="/" style={{ color: "#110F0F", fontFamily: "Montserrat", fontSize: 18, margin: 0 }}>Edit</Link>
+                            </div>
+
+                            <div className="logout">
+                                <Link to="/" style={{ color: "#110F0F", fontFamily: "Montserrat", fontSize: 18, margin: 0 }}>logout</Link>
+                                <Link to="/" style={{ color: "#110F0F", fontFamily: "Montserrat", fontSize: 18, margin: 0 }}>Add Business Account +</Link>
+                            </div>
                         </div>
                     </div>
                 </div>

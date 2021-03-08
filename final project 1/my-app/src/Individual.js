@@ -13,58 +13,57 @@ import other from './photos/icon-photo/Group-407@2x.png'
 export default function Individual() {
 
     return (
-        <div>
+        <div id="individual">
             <h1 style={{ fontFamily: 'Montserrat' }} className="center">INDIVIDUAL</h1>
-            <p style={{ fontFamily: 'Montserrat' }} className="center">Alpha offers a variety of products to insure your property and liability. In order to get the terms that suit you best, contact your agent.</p>
-            <div className="container">
-                <div className="individual-container">
-                    <a href="" className="decoration">
-                        <div className="img-container">
-                            <div className="img-size" style={{ backgroundImage: `url(${insurance})` }}>
-                                <img src={house} className="icon"></img>
-                            </div>
-                            <h2 style={{ fontFamily: 'Montserrat' }} className="decoration">PROPERTY INSURANCE</h2>
+            <p style={{ fontFamily: 'Montserrat' }} className="center" id="individual-p">Alpha offers a variety of products to insure your property and liability. In order to get the terms that suit you best, contact your agent.</p>
+
+            <div className="individual-container">
+                <a href="" className="decoration">
+                    <div className="img-container">
+                        <div className="img-size" style={{ backgroundImage: `url(${insurance})` }}>
+                            <img src={house} className="icon"></img>
                         </div>
-                    </a>
-                    <a href="" className="decoration">
-                        <div className="img-container">
-                            <div className="img-size" style={{ backgroundImage: `url(${auto})` }}>
-                                <img src={car} className="icon"></img>
-                            </div>
-                            <h2 style={{ fontFamily: 'Montserrat' }} className="decoration">PROPERTY INSURANCE</h2>
+                        <h2 style={{ fontFamily: 'Montserrat' }} className="decoration">PROPERTY INSURANCE</h2>
+                    </div>
+                </a>
+                <a href="" className="decoration">
+                    <div className="img-container">
+                        <div className="img-size" style={{ backgroundImage: `url(${auto})` }}>
+                            <img src={car} className="icon"></img>
                         </div>
-                    </a>
-                    <a href="" className="decoration">
-                        <div className="img-container">
-                            <div className="img-size" style={{ backgroundImage: `url(${travel})` }}>
-                                <img src={plane} className="icon"></img>
-                            </div>
-                            <h2 style={{ fontFamily: 'Montserrat' }} className="decoration">PROPERTY INSURANCE</h2>
+                        <h2 style={{ fontFamily: 'Montserrat' }} className="decoration">PROPERTY INSURANCE</h2>
+                    </div>
+                </a>
+                <a href="" className="decoration">
+                    <div className="img-container">
+                        <div className="img-size" style={{ backgroundImage: `url(${travel})` }}>
+                            <img src={plane} className="icon"></img>
                         </div>
-                    </a>
-                    <a href="" className="decoration">
-                        <div className="img-container">
-                            <div className="img-size" style={{ backgroundImage: `url(${health})` }}>
-                                <img src={care} className="icon"></img>
-                            </div>
-                            <h2 style={{ fontFamily: 'Montserrat' }} className="decoration">PROPERTY INSURANCE</h2>
+                        <h2 style={{ fontFamily: 'Montserrat' }} className="decoration">PROPERTY INSURANCE</h2>
+                    </div>
+                </a>
+                <a href="" className="decoration">
+                    <div className="img-container">
+                        <div className="img-size" style={{ backgroundImage: `url(${health})` }}>
+                            <img src={care} className="icon"></img>
                         </div>
-                    </a>
-                    <a href="" className="decoration">
-                        <div className="img-container">
-                            <div className="img-size" style={{ backgroundImage: `url(${bank})` }}>
-                            </div>
-                            <h2 style={{ fontFamily: 'Montserrat' }} className="decoration">PROPERTY INSURANCE</h2>
+                        <h2 style={{ fontFamily: 'Montserrat' }} className="decoration">PROPERTY INSURANCE</h2>
+                    </div>
+                </a>
+                <a href="" className="decoration">
+                    <div className="img-container">
+                        <div className="img-size" style={{ backgroundImage: `url(${bank})` }}>
                         </div>
-                    </a>
-                    <a href="" className="decoration">
-                        <div className="img-container">
-                            <div className="img-size" style={{ backgroundImage: `url(${other})` }}>
-                            </div>
-                            <h2 style={{ fontFamily: 'Montserrat' }} className="decoration">PROPERTY INSURANCE</h2>
+                        <h2 style={{ fontFamily: 'Montserrat' }} className="decoration">PROPERTY INSURANCE</h2>
+                    </div>
+                </a>
+                <a href="" className="decoration">
+                    <div className="img-container">
+                        <div className="img-size" style={{ backgroundImage: `url(${other})` }}>
                         </div>
-                    </a>
-                </div>
+                        <h2 style={{ fontFamily: 'Montserrat' }} className="decoration">PROPERTY INSURANCE</h2>
+                    </div>
+                </a>
             </div>
         </div>
     )

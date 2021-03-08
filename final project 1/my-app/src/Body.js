@@ -1,15 +1,24 @@
-import Header from "./Header";
-import { ThemeProvider } from 'styled-components';
-import { theme } from './Theme';
-import Burger from "./Components/Burger";
-import Menu from "./Components/Menu"
 import React, { useState } from 'react';
+import Swiper from "./Swiper";
+import Individual from "./Individual";
+import Offers from './Offers'
+import Footer from "./Footer";
+import FooterHead from './FooterHead';
+import Products from './Products';
+import IndividualSwiper from './IndividualSwiper';
 
 export default function Body() {
-    const [open, setOpen] = useState(false);
+
     return (
         <div>
-            <Header />
+            <Swiper />
+            <Individual />
+            <IndividualSwiper />
+            <Offers />
+            <p className="p">EXCLUSIVE PRODUCTS</p>
+            <Products />
+            <FooterHead />
+            <Footer />
         </div>
 
     )

@@ -8,10 +8,11 @@ export const StyledBurger = styled.button`
   justify-content: space-around;
   width: 2rem;
   height: 2rem;
+  margin-top: 15px;
   background: transparent;
   border: none;
   cursor: pointer;
-  padding: 0;
+  padding-top: 0;
   z-index: 10;
 
   &:focus {
