@@ -1,0 +1,532 @@
+.partial-height {
+    height: 315px;
+}
+.partial-box {
+    height: 80px;
+    width: 60%;
+}
+.small-margin {
+    margin-top: 5%;
+}
+.partial-direction {
+    margin-left: 50%;
+    width: 100%;
+}
+.partial-box-p {
+    font-family: "Montserrat";
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    margin-right: 15%;
+    height: 100%;
+    align-items: center;
+}
+.partial-steps {
+    width: 93px;
+    height: 88px;
+    background-color: white;
+    color: #E84F5B;
+    border: 2px solid #E84F5B;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "BPG Nino Caps";
+    font-size: 36px;
+}
+.partial-steps-wrap {
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    padding-left: 7.5%;
+    align-items: center;
+}
+.partial-steps-p {
+    font-family: "Montserrat";
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.insurance-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    margin-left: 15%;
+    background-color: white;
+}
+.insurance-wrap {
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    box-shadow: rgb(136 136 136) 2px 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat";
+    font-size: 22px;
+    margin-bottom: 2%;
+}
+.input-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    color: #5C656B;
+}
+.input-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .input-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 23px;
+    width: 23px;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid #E84F5B;
+  }
+  .input-container:hover input ~ .checkmark {
+    background-color: rgb(219, 216, 216);
+  }
+  .input-container input:checked ~ .checkmark {
+    background-color: #e84f5b;
+  }
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .input-container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .input-container .checkmark:after {
+       top: 9px;
+      left: 9px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: white;
+  }
+  .personal-input {
+      width: 80%;
+      height: auto;
+  }
+  .personal-width {
+      width: 70%;
+  }
+  .usd {
+    border: none;
+    font-family: "Segoe UI";
+    font-size: 20px;
+    color: #E84F5B;
+  }
+  .text {
+    display: flex;
+    margin: 0;
+    padding-left: 8px;
+    padding-right: 22px;
+    box-sizing: border-box;
+  }
+  .submit {
+    background: none;
+    position: absolute;
+    right: 22%;
+    margin-top: -12.5%;
+    height: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  form {
+    position: relative;
+  }
+  .question-mark {
+    border: 2px solid #E84F5B;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    margin-top: -10%;
+    color: #E84F5B;
+  }
+  .meaning-box {
+    width: 175px;
+    height: 80px;
+    text-align: start;
+    font-size: 14px;
+    font-family: "FiraGO";
+    background-color: #E84F5B;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 1%;
+    border: 1px solid #E84F5B;
+    border-radius: 15px;
+  }
+  .meaning-place {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 44%;
+    margin-bottom: 2%;
+  }
+  .grey-background {
+    border-radius: 15px;
+    background-color: #999EA2;
+    border: 1px solid #999EA2;
+    color: white;
+    width: 90%;
+    margin-left: 5%;
+    font-family: "Montserrat";
+    font-size: 28px;
+    margin-bottom: 3%;
+  }
+  .price-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 60%;
+  }
+  .price-personal-div {
+    font-family: "FiraGO";
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+  }
+  .payed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-family: "Montserrat";
+    flex-direction: column;
+    margin-bottom: 3%;
+  }
+  .p-margin {
+    margin: 2%;
+  }
+  .payed-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 23%;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  .flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 1%;
+  }
+  .back {
+    font-family: "FiraGO";
+    padding-right: 2%;
+    font-size: 20px;
+  }
+  .red {
+    background: rgb(232, 79, 91);
+    color: white;
+  }
+  .improve-policy {
+    margin-bottom: 4%;
+    display: flex;
+    width: 90%;
+    margin-left: 5%;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    font-family: "Montserrat";
+  }
+  .display-drive {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .question-mark-new {
+    border: 2px solid #E84F5B;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    color: #E84F5B;
+    background: none;
+    position: absolute;
+    right: 22%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .d-p-container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .personal-usd {
+    margin-top: -10%;
+  }
+  .width-30 {
+    width: 30%;
+  }
+  .px27 {
+    font-size: 27px;
+  }
+
+  /* authorized driver */
+
+  .authorized-driver {
+    display: flex;
+    width: 90%;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 5%;
+  }
+  .unset {
+    position: unset;
+  }
+  .small-box {
+    width: 30%;
+    margin-left: 5%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: auto;
+  }
+  .authorized-text-wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 90%;
+  }
+  .authorized-p {
+    font-family: 'Segoe UI';
+    font-size: 20px;
+  }
+  .insurance-personal-width {
+    width: 90%;
+  }
+
+  /* add-driver */
+
+  .review-size {
+    width: 90%;
+    font-size: 16px;
+    font-family: "FiraGO";
+  }
+  .add-driver-background {
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(0px);  
+    top: 25%
+}
+.p-driver {
+  margin: 1%;
+}
+.close {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.5;
+}
+.close:hover {
+  opacity: 1;
+}
+.close:before, .close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 25px;
+  width: 2px;
+  background-color: #333;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
+
+@media (max-width: 1200px) {
+    #usd-personal {
+      margin-top: -12%;
+    }
+    .submit {
+        margin-top: -15.5%;
+    }
+    .small-box {
+      width: 40%;
+    }
+}
+
+@media (max-width: 1150px) {
+    .partial-direction {
+        display: none;
+    }
+    .partial-box {
+        width: 85%;
+        height: 50px;
+    }
+    #m-f {
+      width: 80%;
+    }
+}
+
+@media (max-width: 900px) {
+    .payed-wrapper {
+        width: 30%;
+    }
+    .input-wrap {
+        flex-direction: column;
+        font-size: 16px;
+    }
+    .submit {
+        margin-top: -8%;
+    }
+    .usd {
+        margin-top: -11%;
+    }
+    .small-box {
+      width: 50%;
+    }
+    .p-driver {
+      display: flex;
+    justify-content: center;
+    }
+    .personal-input {
+      width: 100%;
+      height: 40px;
+    }
+    .add-driver-background {
+      top: 12%;
+    }
+}
+
+@media (max-width: 800px) {
+  #wrap-input {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+  }
+  #usd-personal {
+    margin-top: -13%;
+  }
+  .partial-steps-p {
+      display: none;    
+  }
+  .price-div {
+      width: 90%;
+  }
+  .usd {
+      font-size: 16px;
+  }
+  .input-wrap {
+      width: 90%;
+      font-size: 16px;
+  }
+  .insurance-box {
+      width: 90%;
+      margin-left: 5%;
+      /* padding-bottom: 10%; */
+  }
+  #steps {
+      width: 40px;
+      height: 40px;
+      border-radius: 0;
+      margin-bottom: 10%;
+  }
+  #steps1 {
+    width: 40px;
+    height: 40px;
+    border-radius: 0;
+    margin-bottom: 10%;
+  }
+  #steps2 {
+    width: 40px;
+    height: 40px;
+    border-radius: 0;
+    margin-bottom: 10%;
+  }
+  #steps3 {
+    width: 40px;
+    height: 40px;
+    border-radius: 0;
+    margin-bottom: 10%;
+  }
+  #steps4 {
+    width: 40px;
+    height: 40px;
+    border-radius: 0;
+    margin-bottom: 10%;
+  }
+  #steps5 {
+    width: 40px;
+    height: 40px;
+    border-radius: 0;
+    margin-bottom: 10%;
+  }
+  #question-up {
+    display: none;
+  }
+  .question-mark-new {
+    position: initial;
+  }
+  #question-bottom {
+    justify-content: flex-end;
+  }
+  .small-box {
+    width: 90%;
+  }
+}
+
+@media (min-width: 800px) {
+  #question-bottom {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  #usd-personal {
+    margin-top: -16%;
+  }
+    .payed-wrapper {
+        flex-direction: row;
+        width: 90%;
+        margin-left: 5%;
+        justify-content: space-between;
+    }
+}

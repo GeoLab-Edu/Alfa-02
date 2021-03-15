@@ -54,7 +54,7 @@
 } */
 .lang-btn {
     background-color: unset;
-    border-color: white;
+    border:1px solid #5C656B;
     color: white;
     height: 26px;
     width: 26px;

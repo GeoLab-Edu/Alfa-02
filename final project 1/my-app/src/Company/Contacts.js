@@ -12,22 +12,40 @@ import historyIcon from "../photos/icon-photo/history_edu-24px.svg"
 import person from "../photos/icon-photo/accessibility_new-24px.svg"
 
 
-export default function Contacts() {
+export default function ContactsSmall() {
 
     function show() {
         let show = document.querySelector("#review");
         let background = document.querySelector("#background");
         let year2009 = document.querySelector("#year2009");
-        if (show.style.display === "none") {
+        let width = window.matchMedia("(max-width: 950px)");
+
+        if (width.matches && show.style.display === "none") {
+            show.style.display = "flex";
+            background.style.height = "250px";
+            year2009.style.background = "#FFFFFF";
+            year2009.style.color = "#E84F5B";
+        }
+
+        else if (show.style.display === "none") {
             show.style.display = "flex";
             background.style.height = "350px";
             year2009.style.background = "#FFFFFF";
             year2009.style.color = "#E84F5B";
 
         }
+
+        else if (width.matches && show.style.display === "flex") {
+            show.style.display = "none";
+            background.style.height = "120px"
+            year2009.style.background = "#E84F5B";
+            year2009.style.color = "#FFFFFF";
+
+        }
+
         else {
             show.style.display = "none";
-            background.style.height = "250px"
+            background.style.height = "200px"
             year2009.style.background = "#E84F5B";
             year2009.style.color = "#FFFFFF";
         }
@@ -36,64 +54,90 @@ export default function Contacts() {
         let year = document.querySelector("#year");
         let up = document.querySelector("#up");
         let background = document.querySelector("#background");
-        if (year.style.display === "none") {
+        let width = window.matchMedia("(max-width: 950px)");
+        let show = document.querySelector("#review");
+        let year2009 = document.querySelector("#year2009");
+
+        if (width.matches && year.style.display === "none") {
             year.style.display = "flex";
             up.style.transform = "scaleY(-1)";
-            background.style.height = "250px"
+            background.style.height = "120px"
+        }
+        else if (year.style.display === "none") {
+            year.style.display = "flex";
+            up.style.transform = "scaleY(-1)";
+            background.style.height = "200px"
         }
         else {
             year.style.display = "none";
+            show.style.display = "none";
             up.style.transform = "scaleY(1)";
-            background.style.height = "85px"
+            background.style.height = "93px"
+            year2009.style.background = "#E84F5B";
+            year2009.style.color = "#FFFFFF";
+        }
+    }
+    function contactsF() {
+        let contacts = document.querySelector("#hideNShow");
+        let upContacts = document.querySelector("#up-contacts");
+        if (contacts.style.display === "none") {
+            contacts.style.display = "flex";
+            upContacts.style.transform = "scaleY(-1)";
+        }
+        else {
+            contacts.style.display = "none";
+            upContacts.style.transform = "scaleY(1)";
         }
     }
     return (
         <div className="body">
 
             {/* contacts */}
-            <div style={{ backgroundImage: `url(${contacts})`, height: 93, marginBottom: "2%" }} className="repeat">
-                <div className="contacts-wrap">
-                    <div className="row" style={{ justifyContent: "flex-start" }}>
-                        <img src={contact}></img>
-                        <p className="color margin-left">CONTACTS</p>
+            <div >
+                <div style={{ backgroundImage: `url(${contacts})`, marginBottom: "2%" }} className="repeat container-h">
+                    <div className="contacts-wrap">
+                        <div className="row" style={{ justifyContent: "flex-start" }}>
+                            <img src={contact} id="contacts-icon"></img>
+                            <p className=" margin-left" style={{ fontFamily: "Monserrat", color: "white" }}>CONTACTS</p>
+                        </div>
+                        <button style={{ background: "none", border: "none", width: 40 }}><img src={up} style={{ width: 40 }} onClick={contactsF} id="up-contacts"></img></button>
                     </div>
-                    <img src={up} style={{ width: 40 }}></img>
                 </div>
-            </div>
 
 
-            <div className="div-cont">
-                <div className="contacts-div" >
-                    <img src={phone} className="icon-container"></img>
-                    <p style={{ fontSize: 26 }}>(032) 1 640 640</p>
-                </div>
-                <div className="contacts-div" style={{ opacity: 0.8, fontFamily: "Montserrat" }}>
-                    <img src={local} className="icon-container"></img>
-                    <p style={{ fontSize: 22 }}>Online Consultations</p>
-                </div>
-                <div className="contacts-div" style={{ opacity: 0.6, fontFamily: "Montserrat" }}>
-                    <p style={{ margin: "0 2% ", fontSize: 60 }}>@</p>
-                    <p >lnsurance@alpha.ge</p>
+                <div className="div-cont" id="hideNShow" style={{ display: "none" }}>
+                    <div className="contacts-div" >
+                        <img src={phone} className="icon-container"></img>
+                        <p className="contacts-p">(032) 1 640 640</p>
+                    </div>
+                    <div className="contacts-div" style={{ opacity: 0.8, fontFamily: "Montserrat" }}>
+                        <img src={local} className="icon-container"></img>
+                        <p className="contacts-p">Online Consultations</p>
+                    </div>
+                    <div className="contacts-div" style={{ opacity: 0.6, fontFamily: "Montserrat", margin: 0 }}>
+                        <p style={{ margin: "0 2%" }} className="icon-p">@</p>
+                        <p className="contacts-p">lnsurance@alpha.ge</p>
+                    </div>
                 </div>
             </div>
 
             {/* who we are */}
-            <div style={{ backgroundImage: `url(${WeAre})`, height: 93, marginBottom: "2%" }} className="repeat">
+            <div style={{ backgroundImage: `url(${WeAre})`, marginBottom: "2%" }} className="repeat container-h">
                 <div className="contacts-wrap">
                     <div className="row" style={{ justifyContent: "flex-start" }}>
-                        <img src={alpha}></img>
-                        <p className="color margin-left">WHO WE ARE</p>
+                        <img src={alpha} id="contacts-icon"></img>
+                        <p className=" margin-left" style={{ fontFamily: "Monserrat", color: "white" }}>WHO WE ARE</p>
                     </div>
                     <img src={up} style={{ width: 40 }}></img>
                 </div>
             </div>
 
             {/* history */}
-            <div style={{ backgroundImage: `url(${history})`, height: 93, marginBottom: "2%" }} className="repeat" id="background">
+            <div style={{ backgroundImage: `url(${history})`, marginBottom: "2%" }} className="container-h repeat" id="background">
                 <div className="contacts-wrap">
                     <div className="row" style={{ justifyContent: "flex-start" }}>
-                        <img src={historyIcon}></img>
-                        <p className="color margin-left">HISTORY</p>
+                        <img src={historyIcon} id="contacts-icon"></img>
+                        <p className="margin-left" style={{ fontFamily: "Monserrat", color: "white" }}>HISTORY</p>
                     </div>
                     <button style={{ background: "none", border: "none", width: 40 }}><img src={up} id="up" onClick={year}></img></button>
                 </div>
@@ -133,11 +177,11 @@ export default function Contacts() {
             </div>
 
             {/* carrer */}
-            <div style={{ backgroundImage: `url(${carrer})`, height: 93, marginBottom: "2%" }} className="repeat">
+            <div style={{ backgroundImage: `url(${carrer})`, marginBottom: "2%" }} className="repeat container-h">
                 <div className="contacts-wrap">
                     <div className="row" style={{ justifyContent: "flex-start" }}>
-                        <img src={person}></img>
-                        <p className="color margin-left">CARRER</p>
+                        <img src={person} id="contacts-icon"></img>
+                        <p className="margin-left" style={{ fontFamily: "Monserrat", color: "white" }}>CARRER</p>
                     </div>
                     <img src={up} style={{ width: 40 }}></img>
                 </div>

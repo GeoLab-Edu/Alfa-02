@@ -6,16 +6,31 @@ import Burger from "./Components/Burger";
 import Menu from "./Components/Menu"
 import React, { useState } from 'react';
 import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
     Link
 } from "react-router-dom";
-import Body from './Body';
-import Ind from './Individual/Ind';
 
 
 export default function Header() {
+    function stayUp() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function langChangeEn() {
+        let en = document.querySelector("#en");
+        let ge = document.querySelector("#ge");
+        if (en.style.backgroundColor === "rgb(232, 79, 91)") {
+            ge.style.backgroundColor = "#E84F5B";
+            en.style.removeProperty("background-color");
+        }
+    }
+    function langChangeGe() {
+        let en = document.querySelector("#en");
+        let ge = document.querySelector("#ge");
+        if (ge.style.backgroundColor === "rgb(232, 79, 91)") {
+            en.style.backgroundColor = "#E84F5B";
+            ge.style.removeProperty("background-color");
+        }
+    }
     const [open, setOpen] = useState(false);
     return (
         <div className="background" style={{ zIndex: '100', position: 'fixed', width: '100%' }}>
@@ -32,26 +47,31 @@ export default function Header() {
                                 </div>
                             </>
                         </ThemeProvider>
-                        <img src={alfa} style={{ width: 41 }, { height: 38 }}></img>
 
-                        <Link to="/" tyle={{ textDecoration: "none" }}>
-                            <p style={{ color: "white", fontSize: 32 }} className="important">ALPHA</p>
+                        <Link to="/" style={{ textDecoration: "none", display: "flex" }} onClick={stayUp}>
+                            <img src={alfa} style={{ width: 40, height: 40 }}></img>
+                            <p style={{ color: "white", fontSize: 32, margin: 0 }} className="important">Alpha</p>
                         </Link>
                         <div className="lang">
-                            <button className="lang-btn" style={{ backgroundColor: "#E84F5B" }}>EN</button>
-                            <button className="lang-btn">GE</button>
+                            <button className="lang-btn"
+                                style={{ backgroundColor: "#E84F5B" }}
+                                id="en"
+                                onClick={langChangeGe}>EN</button>
+                            <button className="lang-btn"
+                                id="ge"
+                                onClick={langChangeEn}>GE</button>
                         </div>
                     </div>
                     <div className="end div">
                         <div className="div">
-                            <Link to="/individual" style={{ textDecoration: "none", color: "white" }}>INDIVIDUAL</Link>
-                            <Link to="/individual" style={{ textDecoration: "none", color: "white" }}>FOR BUSSINES</Link>
-                            <Link to="/company" style={{ textDecoration: "none", color: "white" }}>COMPANY</Link>
+                            <Link to="/individual" style={{ textDecoration: "none", color: "white" }} onClick={stayUp}>INDIVIDUAL</Link>
+                            <Link to="/individual" style={{ textDecoration: "none", color: "white" }} onClick={stayUp}>FOR BUSSINES</Link>
+                            <Link to="/company" style={{ textDecoration: "none", color: "white" }} onClick={stayUp}>COMPANY</Link>
 
                             {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
                         </div>
-                        <Link to="/personal-cabnet" className="btn" >PERSONAL CABNET</Link>
+                        <Link to="/personal-cabnet" className="btn" onClick={stayUp}>PERSONAL CABNET</Link>
                     </div>
                 </div>
             </div>

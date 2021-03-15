@@ -13,24 +13,58 @@ import notifications from "../photos/icon-photo/Group-413.svg"
 import bills from "../photos/icon-photo/Group-414.svg"
 import Footer from "../Footer"
 import Products from "../Products"
+import phone from "../photos/icon-photo/phonelink_ring-24px.svg"
+import search from "../photos/icon-photo/search-24px (1).svg"
+import consultation from "../photos/icon-photo/icons.svg"
 
 
 export default function Personal() {
+
+    function insurancePersonal() {
+        let insurance = document.querySelector("#insurance");
+        let up = document.querySelector("#up");
+        let background = document.querySelector("#insurancePersonal");
+        if (insurance.style.display === "none") {
+            insurance.style.display = "block";
+            up.style.transform = "scaleY(-1)";
+            background.style.height = "auto"
+            background.style.paddingBottom = "2%"
+        }
+        else {
+            insurance.style.display = "none";
+            up.style.transform = "scaleY(1)";
+            background.style.height = "auto"
+        }
+    }
     return (
         <div style={{ backgroundColor: "#F6F6F6" }}>
-            <div style={{ height: "620px" }}>
-                <div style={{ backgroundImage: `url(${advert})`, height: 500, marginTop: 0 }} className="img div-place">
+            <div >
+                <div style={{ backgroundImage: `url(${advert})`, marginTop: 0 }} className="img div-place personal-back contain">
                     <div className="div-flex" style={{ justifyContent: "flex-start", alignItems: "flex-end" }}>
+                        <div >
+                            <Link className="hidden-btn-style hidden-container personal-right" to="/personal/auto-insurance/buy" style={{ borderRadius: 5 }} >
+                                <img src={phone} style={{ width: 24, marginRight: "10%", marginLeft: "-30%" }}></img>
+                                <p style={{ fontSize: "17px", fontFamily: "FiraGO", marginRight: "5%" }}> 0322567898</p>
+                            </Link>
+                            <Link className="hidden-btn-style hidden-container margin-hidden5 personal-right" to="/personal/auto-insurance/buy" style={{ borderRadius: 5 }} >
+                                <img src={consultation} style={{ width: 24, marginRight: "10%", marginLeft: "-10%" }}></img>
+                                <p style={{ fontSize: "17px", fontFamily: "FiraGO", marginRight: "5%" }}> Online Consultation</p>
+                            </Link>
+                            <Link className="hidden-btn-style hidden-container margin-hidden10 personal-right" to="/personal/auto-insurance/buy" style={{ borderRadius: 5 }} id="search-hidden">
+                                <img src={search} style={{ width: 24, marginRight: "10%", marginLeft: "-40%" }}></img>
+                                <p style={{ fontSize: "17px", fontFamily: "FiraGO", marginRight: "5%" }}> Search</p>
+                            </Link>
+                        </div>
                         <div className="place-name">
                             <img src={myPhoto} className="circle placeholder" ></img>
                             <div className="name-container">
-                                <p style={{ color: "#110F0F", fontFamily: "Montserrat", fontSize: 25, margin: 0 }}>beso dvalishvili</p>
-                                <Link to="/" style={{ color: "#110F0F", fontFamily: "Montserrat", fontSize: 18, margin: 0 }}>Edit</Link>
+                                <p style={{ fontFamily: "Montserrat", margin: 0 }} className="title">beso dvalishvili</p>
+                                <Link to="/" style={{ fontFamily: "Montserrat", margin: 0 }} className="personal-p">Edit</Link>
                             </div>
 
-                            <div className="logout">
-                                <Link to="/" style={{ color: "#110F0F", fontFamily: "Montserrat", fontSize: 18, margin: 0 }}>logout</Link>
-                                <Link to="/" style={{ color: "#110F0F", fontFamily: "Montserrat", fontSize: 18, margin: 0 }}>Add Business Account +</Link>
+                            <div className="logout" id="logout">
+                                <Link to="/" style={{ fontFamily: "Montserrat", margin: 0 }} className="personal-p">logout</Link>
+                                <Link to="/" style={{ fontFamily: "Montserrat", margin: 0 }} className="personal-p">Add Business Account +</Link>
                             </div>
                         </div>
                     </div>
@@ -43,11 +77,11 @@ export default function Personal() {
 
                 {/* active policies */}
                 <div className="policies">
-                    <div style={{ backgroundImage: `url(${chair})`, paddingBottom: "2%" }} className="border">
+                    <div style={{ backgroundImage: `url(${chair})` }} className="border" id="insurancePersonal">
                         <div className="row">
                             <img src={house} className="icon-wrap"></img>
-                            <p className="color">PROPERTY INSURANCE</p>
-                            <img src={up}></img>
+                            <p className="color" style={{ margin: 0 }}>PROPERTY INSURANCE</p>
+                            <button style={{ background: "none", border: "none", width: 40 }}><img src={up} id="up" onClick={insurancePersonal}></img></button>
                         </div>
                         <hr style={{
                             color: "white",
@@ -57,29 +91,40 @@ export default function Personal() {
                         }} />
                         <div style={{
                             color: "#5C656B",
-                            backgroundColor: "white",
                             width: "90%",
                             marginLeft: "5%",
                             borderRadius: 5
                         }} >
-                            <div>
+                            <div id="insurance" style={{ display: "none" }}>
                                 {/* property insurance */}
-                                <div className="wrapper">
-                                    <p style={{ fontSize: 20 }}>Property Insurance</p>
-                                    <div>
-                                        <p style={{ fontSize: 16, margin: 0, paddingBottom: 5 }}>Beso Dvalishvili</p>
-                                        <p style={{ fontSize: 16, margin: 0, paddingBottom: 5 }}>Valid Untill: 17/05/21</p>
-                                        <p style={{ fontSize: 16, margin: 0, paddingBottom: 5 }}>Police's Number: 009876509</p>
-                                        <p style={{ fontSize: 22, margin: 0, paddingBottom: 10, color: "#E84F5B" }}><b>34.00 Gel</b></p>
+                                <div style={{ marginBottom: "2%" }} >
+                                    <div className="wrapper" style={{
+                                        backgroundColor: "white",
+                                        color: "#5C656B",
+                                        marginLeft: "3%",
+                                        borderRadius: 5
+                                    }}>
+                                        <p style={{ fontSize: 20 }}>Property Insurance</p>
+                                        <div>
+                                            <p style={{ fontSize: 16, margin: 0, paddingBottom: 5 }}>Beso Dvalishvili</p>
+                                            <p style={{ fontSize: 16, margin: 0, paddingBottom: 5 }}>Valid Untill: 17/05/21</p>
+                                            <p style={{ fontSize: 16, margin: 0, paddingBottom: 5 }}>Police's Number: 009876509</p>
+                                            <p style={{ fontSize: 22, margin: 0, paddingBottom: 10, color: "#E84F5B" }}><b>34.00 Gel</b></p>
 
-                                        <div className="btn-position" >
-                                            <button className="btn-style" style={{ width: 224, height: 49, fontSize: 24, marginBottom: 10 }}>pay</button>
-                                            <Link to="" style={{ fontSize: 20, margin: 0, paddingBottom: 5, color: "#5C656B" }}><b>change payment method</b></Link>
+                                            <div className="btn-position" >
+                                                <button className="btn-style personal-btn" style={{ marginBottom: 10 }}>pay</button>
+                                                <Link to="" style={{ fontSize: 20, margin: 0, paddingBottom: 5, color: "#5C656B" }}><b>change payment method</b></Link>
+                                            </div>
+
                                         </div>
-
                                     </div>
                                 </div>
-                                <div className="wrapper" >
+                                <div className="wrapper" style={{
+                                    backgroundColor: "white",
+                                    color: "#5C656B",
+                                    marginLeft: "3%",
+                                    borderRadius: 5
+                                }} >
                                     <div>
                                         <div className="btn-position links-text" >
                                             <Link to="" style={{ fontSize: 20, margin: 0, paddingBottom: 5, color: "#5C656B" }}><b>change payment method</b></Link>
@@ -127,16 +172,16 @@ export default function Personal() {
                 {/* links */}
                 <div className="row" style={{ marginTop: "3%", justifyContent: "space-around", marginBottom: "4%" }}>
                     <div className="links-text">
-                        <Link to=""><img src={bills}></img></Link>
-                        <p style={{ fontSize: 26 }}>MY BILLS</p>
+                        <Link to=""><img src={bills} id="link"></img></Link>
+                        <p className="px26">MY BILLS</p>
                     </div>
                     <div className="links-text">
-                        <Link to=""><img src={statements}></img></Link>
-                        <p style={{ fontSize: 26 }}>STATEMENTS</p>
+                        <Link to=""><img src={statements} id="link"></img></Link>
+                        <p className="px26">STATEMENTS</p>
                     </div>
                     <div className="links-text">
-                        <Link to=""><img src={notifications}></img></Link>
-                        <p style={{ fontSize: 26 }}>NOTIFICATIONS</p>
+                        <Link to=""><img src={notifications} id="link"></img></Link>
+                        <p className="px26">NOTIFICATIONS</p>
                     </div>
                 </div>
 

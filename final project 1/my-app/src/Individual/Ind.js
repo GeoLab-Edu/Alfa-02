@@ -1,6 +1,6 @@
 import Liability from "../photos/icon-photo/pexels-photo-532001@2x.png"
 import Passenger from "../photos/icon-photo/pexels-photo-1117647@2x.png"
-import Automobile from "../photos/icon-photo/pexels-photo-1719648@2x.png"
+import auto from "../photos/icon-photo/pexels-photo-1719648@2x.png"
 import Icon from "../photos/icon-photo/drive_eta-24px.svg"
 import "./Ind.css"
 import conditions from "../photos/icon-photo/Group-338.svg"
@@ -9,19 +9,30 @@ import tarrif from "../photos/icon-photo/Group-337.svg"
 import YouNeed from "./YouNeed"
 import Footer from "../Footer"
 import IndividualHead from "./IndividulHead"
+import Drive from "./Drive"
+import Automobile from "./Automobile"
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+} from "react-router-dom";
 
 
 export default function Ind() {
+    function stayUp() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
     return (
         <div style={{ backgroundColor: "#F6F6F6" }}>
 
             <IndividualHead />
 
-            <div className="individual-container" style={{ marginTop: "2%" }}>
+            <div className="individual-container" style={{ marginTop: "2%" }} >
                 <a href="" className="decoration">
                     <div className="img-container">
-                        <div className="img-size" style={{ backgroundImage: `url(${Automobile})` }}>
-                            <img src={Icon} className="icon"></img>
+                        <div className="img-size" style={{ backgroundImage: `url(${auto})` }}>
+                            <img src={Icon} className="individual-icon"></img>
                         </div>
                         <p style={{ fontFamily: 'Montserrat', fontSize: 24 }} className="decoration">AUTOMOBILE INSURANCE</p>
                     </div>
@@ -29,7 +40,7 @@ export default function Ind() {
                 <a href="" className="decoration">
                     <div className="img-container">
                         <div className="img-size" style={{ backgroundImage: `url(${Liability})` }}>
-                            <img src={Icon} className="icon"></img>
+                            <img src={Icon} className="individual-icon"></img>
                         </div>
                         <p style={{ fontFamily: 'Montserrat', fontSize: 24 }} className="decoration">LIABILITY INSURANCE</p>
                     </div>
@@ -37,15 +48,18 @@ export default function Ind() {
                 <a href="" className="decoration">
                     <div className="img-container">
                         <div className="img-size" style={{ backgroundImage: `url(${Passenger})` }}>
-                            <img src={Icon} className="icon"></img>
+                            <img src={Icon} className="individual-icon"></img>
                         </div>
                         <p style={{ fontFamily: 'Montserrat', fontSize: 24 }} className="decoration">PASSANGER INSURANCE</p>
                     </div>
                 </a>
             </div>
 
+            <Drive />
 
-            <div className="box">
+            <Automobile />
+
+            <div className="box" id="box">
                 <p style={{ fontSize: 16, fontFamily: "Montserrat" }}>While driving the road is full of surprises. You can protect your finances and use 24 hours auto assistant by insuring your car. In case of a car accident, car insurance will help you to repair or change damaged parts of the car and give you the opportunity to return to your normal life in the shortest time.</p>
                 <div className="text-right">
                     <ul style={{ fontSize: 18, fontFamily: "Montserrat", paddingLeft: 0 }}>What does Motor Insurance cover?</ul>
@@ -75,8 +89,9 @@ export default function Ind() {
                 </div>
             </div>
             <div className="btn-position">
-                <button className="btn-style" >Buy</button>
+                <Link className="btn-style" to="/personal/auto-insurance/buy" onClick={stayUp}>Buy</Link>
             </div>
+
 
 
             <YouNeed />
